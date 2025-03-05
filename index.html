@@ -4,123 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EducaTI - Your Path to IT Success</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50">
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <h1>Educa<span>TI</span></h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#roadmaps">Roadmaps</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="fixed w-full bg-white/95 shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold">Educa<span class="text-blue-600">TI</span></h1>
+                </div>
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a></li>
+                        <li><a href="#roadmaps" class="text-gray-700 hover:text-blue-600 transition-colors">Roadmaps</a></li>
+                        <li><a href="#courses" class="text-gray-700 hover:text-blue-600 transition-colors">Courses</a></li>
+                        <li><a href="#certifications" class="text-gray-700 hover:text-blue-600 transition-colors">Certifications</a></li>
+                        <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button class="hamburger p-2">
+                        <div class="w-6 h-0.5 bg-gray-600 mb-1.5"></div>
+                        <div class="w-6 h-0.5 bg-gray-600 mb-1.5"></div>
+                        <div class="w-6 h-0.5 bg-gray-600"></div>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Start Your IT Career Journey Today</h1>
-            <p>Discover the best learning paths and certifications to launch your career in technology</p>
-            <a href="#roadmaps" class="cta-button">Explore Roadmaps</a>
+    <section id="home" class="relative h-screen flex items-center justify-center text-white">
+        <div class="absolute inset-0 bg-black/70 z-10"></div>
+        <div class="bg-[url('https://via.placeholder.com/1920x1080')] absolute inset-0 bg-cover bg-center"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-20">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Start Your IT Career Journey Today</h1>
+            <p class="text-xl mb-8">Discover the best learning paths and certifications to launch your career in technology</p>
+            <a href="#roadmaps" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors inline-block">Explore Roadmaps</a>
         </div>
     </section>
 
     <!-- Roadmaps Section -->
-    <section id="roadmaps" class="roadmaps">
-        <h2>Career Roadmaps</h2>
-        <div class="roadmap-container">
-            <div class="roadmap-card">
-                <i class="fas fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Frontend, Backend, and Full Stack development paths</p>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-            <div class="roadmap-card">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud Computing</h3>
-                <p>AWS, Azure, and Google Cloud certification paths</p>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-            <div class="roadmap-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Cybersecurity</h3>
-                <p>Security certifications and career paths</p>
-                <a href="#" class="learn-more">Learn More</a>
+    <section id="roadmaps" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Career Roadmaps</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform">
+                    <i class="fas fa-code text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                    <p class="text-gray-600 mb-6">Frontend, Backend, and Full Stack development paths</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">Learn More →</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform">
+                    <i class="fas fa-cloud text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Cloud Computing</h3>
+                    <p class="text-gray-600 mb-6">AWS, Azure, and Google Cloud certification paths</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">Learn More →</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform">
+                    <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Cybersecurity</h3>
+                    <p class="text-gray-600 mb-6">Security certifications and career paths</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">Learn More →</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="courses">
-        <h2>Popular Courses</h2>
-        <div class="course-container">
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <div class="course-info">
-                    <h3>CompTIA A+ Certification</h3>
-                    <p>Start your IT journey with the fundamental certification</p>
-                    <span class="price">$299</span>
-                    <a href="#" class="enroll-button">Learn More</a>
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Popular Courses</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/300x200" alt="Course Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">CompTIA A+ Certification</h3>
+                        <p class="text-gray-600 mb-4">Start your IT journey with the fundamental certification</p>
+                        <span class="text-2xl text-blue-600 font-bold block mb-4">$299</span>
+                        <a href="#" class="block text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition-colors">Learn More</a>
+                    </div>
                 </div>
+                <!-- Add more course cards as needed -->
             </div>
-            <!-- Add more course cards as needed -->
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <div class="contact-container">
-            <form id="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <form id="contact-form" class="space-y-6">
+                <input type="text" placeholder="Name" required 
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                <input type="email" placeholder="Email" required 
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                <textarea placeholder="Message" required rows="5"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                <button type="submit" 
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors">
+                    Send Message
+                </button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>EducaTI</h3>
-                <p>Your gateway to a successful IT career</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#roadmaps">Roadmaps</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-gray-900 text-white pt-16 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">EducaTI</h3>
+                    <p class="text-gray-400">Your gateway to a successful IT career</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#roadmaps" class="text-gray-400 hover:text-white transition-colors">Roadmaps</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Courses</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 EducaTI. All rights reserved.</p>
+            <div class="text-center pt-8 border-t border-gray-800">
+                <p class="text-gray-400">&copy; 2024 EducaTI. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
