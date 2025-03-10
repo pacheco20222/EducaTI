@@ -97,7 +97,7 @@ EducaTI was developed to address the growing need for structured IT education an
    ```
 
 5. **Environment Configuration**
-   - Copy `.env.example` to `.env`
+   - Copy `.env.example.txt` to `.env`
    - Update the database credentials in `.env`:
    ```env
    DB_HOST=localhost
@@ -126,7 +126,7 @@ EducaTI/
 │   │   └── hero_section.png
 │   │   └── learning_path.png
 │   │   └── roadmap.png
-
+│   │   └── homepage.png
 ├── templates/
 │   ├── base.html
 │   ├── index.html
@@ -151,14 +151,14 @@ EducaTI/
    - Explore certification options
    - View salary expectations
 
-[Screenshot of Homepage Navigation]
+![Homepage Hero](static/img/homepage.png)
 
 2. **User Registration**
    - Create an account
    - Complete your profile
    - Access personalized content
 
-[Screenshot of Registration Form]
+![Homepage Hero](static/img/signup.png)
 
 3. **Career Path Selection**
    - Choose your desired IT path
@@ -196,6 +196,6 @@ This project is created for educational purposes as part of a university competi
 
 ---
 
-¡[Mayab logo](static/img/mayab.png)
+![Homepage Hero](static/img/mayab.png)
 
 *This project was developed as part of entrepreneurship class at Anahuac Mayab*
